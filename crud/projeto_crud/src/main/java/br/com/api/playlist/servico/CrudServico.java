@@ -30,7 +30,7 @@ public class CrudServico {
             rm.setMensagem("O nome do músico é obrigatório");
             return new ResponseEntity<RespostaModelo>(rm, HttpStatus.BAD_REQUEST);
 
-        } else if (cm.getIdade_cantor().equals(0)){
+        } else if ((cm.getIdade_cantor().equals(0) || cm.getIdade_cantor().equals(null) || cm.getIdade_cantor().equals(""))){
             rm.setMensagem("A idade do músico é obrigatória");
             return new ResponseEntity<RespostaModelo>(rm, HttpStatus.BAD_REQUEST);
 

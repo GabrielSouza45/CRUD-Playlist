@@ -32,12 +32,16 @@ public class MusicaServico {
             rm.setMensagem("O nome da música é obrigatório");
             return new ResponseEntity<RespostaModelo>(rm, HttpStatus.BAD_REQUEST);
 
-        } else if (mm.getLancamento().equals(0) || mm.getLancamento().equals(null)) {
+        } else if (mm.getLancamento().equals(0) || mm.getLancamento().equals(null) || mm.getLancamento().equals("")) {
             rm.setMensagem("A data de lançamento é obrigatória.");
             return new ResponseEntity<RespostaModelo>(rm, HttpStatus.BAD_REQUEST);
 
         
-        } else {
+        } else if ((mm.getId_cantor().equals(0) || mm.getId_cantor().equals(null) || mm.getId_cantor().equals(""))){
+            rm.setMensagem("O nome do cantor é obrigatório.");
+            return new ResponseEntity<RespostaModelo>(rm, HttpStatus.BAD_REQUEST);
+        }
+        else {
             if (acao.equals("cadastrar")) {
                 return new ResponseEntity<MusicaModelo>(mr.save(mm), HttpStatus.CREATED);
 

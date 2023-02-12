@@ -53,18 +53,11 @@ const Cadastro = ({
       </section>
 
       <section className="tabelaCantor">
-        <Tabela
-          vetor={vetor}
-          selecionar={selecionar}
-          altCantor={altCantor}
-          rmvCantor={rmvCantor}
-          objCantor={objCantor}
-        />
+        <Tabela vetor={vetor} selecionar={selecionar} />
       </section>
-    <section className="tabelaMusica">
-      <TabelaMusica vetor={vetorMus} selecionar={selecionarMusica}/>
-    </section>
-
+      <section className="tabelaMusica">
+        <TabelaMusica vetor={vetorMus} selecionar={selecionarMusica} />
+      </section>
     </>
   );
 };

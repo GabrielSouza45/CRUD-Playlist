@@ -313,7 +313,7 @@ function App() {
             <TabelaMusica vetor={musicas} selecionar={selecionarMusica} />
           }
         />
-        {/* <Route path="/tabela" element={<Tabela />} /> */}
+       
       </Routes>
     </BrowserRouter>
   );

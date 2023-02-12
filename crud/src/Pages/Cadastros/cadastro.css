@@ -5,11 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
 }
 
 .cadastros {
-  width: 900px;
+  width: 800px;
   height: 500px;
   border: 1px solid #f0dddd;
   border-radius: 15px;
